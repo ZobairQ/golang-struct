@@ -13,6 +13,7 @@ type person struct {
 }
 
 func main() {
+	newMap()
 	john := person{
 		firstName: "John",
 		lastName:  "Doe",
