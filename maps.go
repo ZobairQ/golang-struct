@@ -19,9 +19,6 @@ func newMap() {
 
 	delete(words, "go") // deletes by key
 
-	// fmt.Println(colors)
-	// fmt.Println(words)
-	// fmt.Println(wordsCreatedWithMake)
 	printMap(colors)
 }
 
