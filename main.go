@@ -13,6 +13,8 @@ type person struct {
 }
 
 func main() {
+	dog := dog{}
+	letAnimalSpeak(dog)
 	newMap()
 	john := person{
 		firstName: "John",
