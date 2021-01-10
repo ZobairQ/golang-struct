@@ -19,7 +19,14 @@ func newMap() {
 
 	delete(words, "go") // deletes by key
 
-	fmt.Println(colors)
-	fmt.Println(words)
-	fmt.Println(wordsCreatedWithMake)
+	// fmt.Println(colors)
+	// fmt.Println(words)
+	// fmt.Println(wordsCreatedWithMake)
+	printMap(colors)
+}
+
+func printMap(m map[string]string) {
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
 }
