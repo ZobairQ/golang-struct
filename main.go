@@ -38,7 +38,7 @@ func main() {
 	peter.greet()
 
 	// Not using a address operator
-	(&john).updateName("Jane") // or simply john.updateName
+	john.updateName("Jane") // go will translate this into a address
 	john.greet()
 }
 
@@ -50,6 +50,6 @@ func (p person) print() {
 	fmt.Printf("%+v", p) // Prints the keys and values
 }
 
-func (p person) greet() {
+func (p *person) greet() {
 	fmt.Println("Hello my name is ", p.firstName)
 }
