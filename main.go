@@ -32,10 +32,24 @@ func main() {
 
 	peter.contactInfo = contact
 
-	fmt.Println(john)
-	fmt.Printf("%+v", peter) // Prints the keys and values
+	// Using a address operator
+	pointerToPeter := &peter
+	pointerToPeter.updateName("Nedri")
+	peter.greet()
+
+	// Not using a address operator
+	(&john).updateName("Jane") // or simply john.updateName
+	john.greet()
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (p *person) updateName(newFirstName string) {
+	(*p).firstName = newFirstName
+}
+
+func (p person) print() {
+	fmt.Printf("%+v", p) // Prints the keys and values
+}
+
+func (p person) greet() {
+	fmt.Println("Hello my name is ", p.firstName)
 }
