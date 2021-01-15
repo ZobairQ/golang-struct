@@ -10,9 +10,14 @@ type animal interface {
 }
 type dog struct{}
 type cat struct{}
+type cow struct{}
 
 func (dog) speak() {
 	fmt.Println("Woof!")
+}
+
+func (cow) speak() {
+	fmt.Println("Mooo!")
 }
 
 func (cat) speak() {
